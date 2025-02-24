@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet"  href="../static/styles.css">
+</head>
+<body class="register">
+    <form method="POST">
+        {% csrf_token %}
+        <label>Enter Aadhaar Number</label>
+        <input type="text" name="aadhar_number" required>
+        <button type="submit">Register</button>
+    </form> 
+</body>
+</html>
+
+

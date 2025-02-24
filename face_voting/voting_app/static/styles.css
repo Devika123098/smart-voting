@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #ececec;
+    color: black;
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+    overflow: hidden;
+}
+.home > h1{
+    font-size: 2.986rem;
+    margin-bottom: 10rem;
+}
+.home > a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    background-color: dodgerblue;
+    border-radius: 6px;
+    scale: 1;
+    transition: all 0.2s ease-in-out;
+}
+.home > .register-link{
+    margin-bottom: 1.25rem;
+    padding: 0.75rem 1.25rem;
+}
+.home > .vote-link{
+    padding: 0.75rem 2rem;
+}
+.register{
+    justify-content: center;
+}
+.register > form{
+    background-color: #d0d0d0;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 6px;
+}
+.vote> form{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.register > form > label{
+    font-size: 1.2rem;
+}
+.vote > form > label{
+    font-size: 1.44rem;
+}
+.register > form > input{
+    width: 200px;
+    padding-block: 0.25rem;
+    padding-left: 0.25rem;
+}
+.vote > form > select{
+    width: 250px;
+    padding-block: 0.7rem;
+    padding-left: 0.25rem;
+}
+
+.register > form > button, .vote > form > button{
+    font-size: 1.1rem;
+    background-color: dodgerblue;
+    border-radius: 6px;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    scale: 1;
+    transition: all 0.2s ease-in-out;
+}
+.register > form > button:hover, .home > a:hover, .vote > form > button:hover{
+    scale: 1.1;
+}
+.vote h2{
+    font-size: 2.986rem;
+    margin-bottom: 2rem;
+}
