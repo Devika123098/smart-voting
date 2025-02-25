@@ -1,19 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>register</title>
-    <link rel="stylesheet"  href="../static/styles.css">
+    <link rel="stylesheet" href="../static/output.css">
 </head>
-<body class="register">
-    <form method="POST">
+
+<body class="register bg-[#F9FAFB]  w-full h-screen flex items-center justify-center">
+    <header class="bg-blue-500 w-full h-[100px] px-4 flex items-center justify-between fixed top-0">
+        <p class="text-2xl text-white font-semibold">Online Voting System</p>
+        <nav class="flex justify-end items-center">
+            <a href="{% url 'home' %}"class="mr-4 text-xl text-white hover:underline">Home</a>
+            <a href="{% url 'vote' %}" class="text-xl text-white hover:underline">Vote</a>
+        </nav>
+    </header>
+    <form method="POST" class="flex flex-col bg-white w-[450px]  px-2 py-4 rounded-lg shadow-md">
         {% csrf_token %}
-        <label>Enter Aadhaar Number</label>
-        <input type="text" name="aadhar_number" required>
-        <button type="submit">Register</button>
-    </form> 
+        <h2 class="text-2xl font-semibold-semibold mb-4">Register for Voting</h2>
+        <label class="text-sm mb-1 text-[#374151]">Enter your Name</label>
+        <input type="text" name="name" required class="text-[#374151] border-1 border-[#E5E7EB] rounded-md px-2 py-1 mb-2 focus:outline-0">
+        <label class="text-sm mb-1 text-[#374151]">Date of Birth</label>
+        <input type="date"class="text-[#374151] border-1 border-[#E5E7EB] rounded-md px-2 py-1 mb-2 focus:outline-0">
+        <label class="text-sm mb-1 text-[#374151]">Enter Aadhaar Number</label>
+        <input type="text" name="aadhar_number" required class="text-[#374151] border-1 border-[#E5E7EB] rounded-md px-2 py-1 mb-4 focus:outline-0">
+        <button type="submit" class="bg-blue-500 text-white py-2 px-3 rounded-md hover:opacity-95 animation delay-75 mb-8">Register Now</button>
+        <div class="bg-[#EFF6FF] px-2 py-2.5 rounded-md">
+            <p class="font-medium mb-4">Registration Requirements:</p>
+            <div class="flex gap-2 mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 48 48">
+                    <path fill="#c8e6c9"
+                        d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path>
+                    <path fill="#4caf50"
+                        d="M34.586,14.586l-13.57,13.586l-5.602-5.586l-2.828,2.828l8.434,8.414l16.395-16.414L34.586,14.586z">
+                    </path>
+                </svg>
+                <p class="text-sm">Valid Aadhaar card</p>
+            </div>
+            <div class="flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 48 48">
+                    <path fill="#c8e6c9"
+                        d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path>
+                    <path fill="#4caf50"
+                        d="M34.586,14.586l-13.57,13.586l-5.602-5.586l-2.828,2.828l8.434,8.414l16.395-16.414L34.586,14.586z">
+                    </path>
+                </svg>
+                <p class="text-sm">Must be 18 years or older</p>
+            </div>
+        </div>
+    </form>
 </body>
+
 </html>
-
-

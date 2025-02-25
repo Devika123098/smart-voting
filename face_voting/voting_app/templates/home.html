@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Online Voting System</title>
-    <link rel="stylesheet"  href="../static/styles.css">
+    <link rel="stylesheet" href="../static/output.css">
 </head>
+
 <body class="home">
-    <h1>Welcome to the Online Voting System</h1>
-    <a href="{% url 'register' %}" class="register-link">Register</a>
-    <a href="{% url 'vote' %}"class="vote-link">Vote</a>
+    <header class="bg-blue-500 w-full h-[100px] px-4 flex items-center justify-between fixed top-0">
+        <p class="text-2xl text-white font-semibold">Online Voting System</p>
+        <nav class="flex justify-end items-center">
+            <a href="#home" class="mr-4 text-xl text-white hover:underline">Home</a>
+            <a href="#about" class="mr-4 text-xl text-white hover:underline">About</a>
+            <a href="{% url 'register' %}" class="mr-4 text-xl text-white hover:underline">Register</a>
+            <a href="{% url 'vote' %}" class="text-xl text-white hover:underline">Vote</a>
+        </nav>
+    </header>
+    <main>
+        <div class=" bg-center bg-no-repeat bg-cover h-screen w-full" id="home"
+            style="background-image: url('https://cdn.pixabay.com/photo/2024/06/10/08/33/ai-generated-8820201_1280.jpg');">
+        </div>
+        <h2 class="text-center text-4xl text-blue-500 mt-8 font-bold">About</h2>
+        <p class="text-blue-500 mx-4 mt-4 text-justify" id="about"> 
+            Online voting systems have transformed the way elections are conducted by providing voters with the
+            convenience of casting their ballots from anywhere with an internet connection. This accessibility is
+            particularly beneficial for individuals with disabilities or those living in remote areas, who may face
+            challenges in reaching traditional polling stations. By leveraging technology, online voting platforms can
+            significantly increase voter turnout and make the electoral process more inclusive.
+
+            The security and verification of online voting systems are critical components that ensure the integrity of
+            the electoral process. These systems rely on robust authentication and verification techniques, such as
+            multi-factor authentication and biometric verification, to confirm that only eligible voters can
+            participate. Additionally, measures like end-to-end encryption protect the privacy of voters and maintain
+            the secrecy of their ballots. While these measures are effective, they must be continually updated to
+            counter emerging cybersecurity threats.
+
+            Despite its numerous advantages, online voting faces several challenges and concerns. Cybersecurity threats remain a major issue, as hackers could potentially compromise the system and manipulate results. Additionally, the digital divide—where some individuals lack access to reliable internet or digital literacy—poses a significant barrier to universal adoption. Ensuring voter anonymity and maintaining public trust in the system are also crucial factors that must be addressed to ensure the success of online voting. By addressing these challenges, online voting can become a reliable and trustworthy method for conducting elections.
+        </p>
+    </main>
+    <footer class="bg-blue-500 w-full h-[250px] mt-8  px-4 ">
+       <div class="flex items-start justify-evenly">
+        <nav class=" flex flex-col mt-4">
+            <a href="#home" class="mb-4 text-xl text-white hover:underline">Home</a>
+            <a href="#about" class="mb-4 text-xl text-white hover:underline">About</a>
+            <a href="{% url 'register' %}" class="mb-4 text-xl text-white hover:underline">Register</a>
+            <a href="{% url 'vote' %}" class="mb-4 text-xl text-white hover:underline">Vote</a>
+        </nav>
+        <div class="mt-4 text-white flex flex-col">
+            <p class="text-xl mb-4">Contact Us</p>
+            <a href='mailto:example@example.com'>example@example.com</a>
+            <a href="tel:+91234567890">+91234567890</a>
+        </div>
+       </div>
+        <p class="text-center mt-4 text-white text-sm">© 2025 online voting system. All rights reserved. </p>
+    </footer>
 </body>
+
 </html>

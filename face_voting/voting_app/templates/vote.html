@@ -4,22 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vote</title>
-    <link rel="stylesheet"  href="../static/styles.css">
+    <link rel="stylesheet" href="../static/output.css">
 </head>
-<body class="vote">
-    <form method="POST">
+<body class="vote bg-white w-full h-screen flex flex-col items-center">
+    <h2 class="text-3xl font-bold mt-12 mb-8">Cast Your Vote</h2>
+    <div class="bg-[#EFF6FF] px-2.5 py-3 rounded-md w-1/2">
+        <div class="mb-2 flex gap-2 items-center">
+            <img src="https://img.icons8.com/?size=100&id=60673&format=png&color=228BE6" class="w-[20px] h-[20px]">
+            <h3 class="font-semibold text-xl">Important Instrustions</h3>
+        </div>
+            <ul class="text-[#4B5563]">
+                <li>• Select only one candidate</li>
+                <li>• Verify your selection before confirming</li>
+                <li>• Your vote is confidential and secure</li>
+            </ul>
+    </div>
+    <form method="POST" class="mt-8 flex flex-col items-center">
         {% csrf_token %}
-        <h2>Vote for Your Candidate</h2>
         
-        <label>Select Candidate</label>
-        <select name="candidate" required>
-            <option value="BJP">BJP</option>
-            <option value="Congress">Congress</option>
-            <option value="AAP">AAP</option>
-            <option value="NOTA">NOTA</option>
-        </select>
-        
-        <button type="submit">Submit Vote</button>
+        <div class="flex gap-4 w-full">
+            <div class="border-1 border-[#E5E7EB] rounded-md px-2 py-1 text-center">
+                <img src="https://img.freepik.com/free-photo/young-adult-man-wth-black-hair-posing-white-wall_231208-2284.jpg?t=st=1740436047~exp=1740439647~hmac=db9b801b8c61d5d0e123c3300dd9cdaf749453a54a2f15ee4081a8934fdc82d1&w=1380" class="w-[200px] h-[200px] rounded-[50%]">
+                <h6 class="font-bold my-2">Pankaj Singh</h6>
+                <p class="text-[#4B5563] mb-2">BJP</p>
+                    <input type="radio" name="candidate" value="BJP" class="text-[#E5E7EB]"> 
+                
+            </div>
+            
+            <div class="border-1 border-[#E5E7EB] rounded-md px-2 py-1 text-center">
+                <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?t=st=1740436008~exp=1740439608~hmac=d3640ae2a9043e78aa41710ebefd251f297d3c06c292a6c999db10089688347c&w=1380"class="w-[200px] h-[200px] rounded-[50%]">
+                <h6 class="font-bold my-2">Rajesh Kumar</h6>
+                <p class="text-[#4B5563] mb-2">Congress</p>
+                    <input type="radio" name="candidate" value="congress"class="text-[#E5E7EB]"> 
+                
+            </div>
+            <div class="border-1 border-[#E5E7EB] rounded-md px-2 py-1 text-center">
+                <img src="https://cdn.pixabay.com/photo/2017/04/21/17/41/image-2249391_1280.jpg"class="w-[200px] h-[200px] rounded-[50%]">
+                <h6 class="font-bold my-2">Anila S</h6>
+                <p class="text-[#4B5563] mb-2">ATP</p>
+                    <input type="radio" name="candidate" value="ATP" class="text-[#E5E7EB]"> 
+                
+            </div>
+            
+        </div>
+        <button type="submit" class="bg-blue-500 w-[500px] mt-8 text-white py-2 px-3 rounded-md hover:opacity-95 animation delay-75 flex items-center justify-center gap-2">
+            Submit Vote
+            <img src="https://img.icons8.com/?size=100&id=14914&format=png&color=FFFFFF"class="w-[20px] h-[20px]">
+        </button>
     </form>
 </body>
 </html>
